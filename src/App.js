@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import HomePage from './components/homePage/HomePage';
+import PizzaBulder from './containers/pizzaBuilder/PizzaBuilder';
+import ThankYou from './components/thankYou/thankYou';
 
 
 class App extends Component {
@@ -101,9 +105,17 @@ class App extends Component {
       ]
     }
   }
+
+  
   render() {
     return ( 
-      
+      <div className="main">
+        <Switch>
+          <Route path="/" component={HomePage}/>
+          <Route path="/pizzaBuilder" component={PizzaBulder}/>
+          <Route path="/thankYou" component={ThankYou}/>
+        </Switch>
+      </div>
      );
   }
 }
