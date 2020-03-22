@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/homePage/HomePage';
 import PizzaBulder from './containers/pizzaBuilder/PizzaBuilder';
-import ThankYou from './components/thankYou/thankYou';
+import ThankYou from './components/thankYou/ThankYou';
 
 
 class App extends Component {
@@ -106,7 +106,7 @@ class App extends Component {
     }
   }
 
-  
+
   render() {
     return ( 
       <div className="main">

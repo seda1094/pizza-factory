@@ -1,0 +1,76 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Nunito+Sans&display=swap');
+
+.main_block{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #000;
+    /* background-image: url(https://static3.bigstockphoto.com/8/3/2/large2/238178938.jpg);
+    background-size: cover;
+    background-attachment: fixed; */
+}
+.app_title_block, .app_image_block, .app_create-button_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app_title_block{
+  height: 30% !important;  
+}
+
+.app_title_block h1{
+    text-align: center;
+    color: #af0404;
+}
+
+.app_title_block h1 .subTitle{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 80px;
+}
+
+.app_title_block h1 .genTitle{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 70px;
+    color: #ffd086;
+}
+
+.app_image_block{
+    height: 50% !important;
+    align-items: flex-start;
+    border-bottom: 5px dotted #ffd086;
+}
+.app_image{
+    width: 100%;
+}
+
+.app_create-button_block{
+    height: 20% !important; 
+    align-items: flex-start;
+}
+
+.app_create-button_block button{
+    margin-top: 10%;
+    width: 50%;
+    height: 40%;
+    background-color: #000;
+    border: 3px dashed #af0404;
+    border-radius: 12px;
+    color: #af0404;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
+}
+
+.app_create-button_block button:active{
+    background-color: #af0404;
+    border: 5px dotted #ffd086;
+    color: #ffd086;
+}
+
+.app_create-button_block button:focus{
+    outline: none;
+}
+
+.js{
+    justify-content: center;
+}

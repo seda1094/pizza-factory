@@ -4,3 +4,16 @@
   list-style-type: none;
   text-decoration: none;
 }
+
+*:focus{
+  outline: none;
+}
+
+html,body{
+  width: 100% !important;
+  height: 100% !important;
+}
+body div{
+  width: 100% !important;
+  height: 100% !important;
+}
