@@ -21,7 +21,7 @@
 
 .app_title_block h1{
     text-align: center;
-    color: #af0404;
+    color: chartreuse;
 }
 
 .app_title_block h1 .subTitle{
@@ -32,13 +32,13 @@
 .app_title_block h1 .genTitle{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 70px;
-    color: #ffd086;
+    color: yellow;
 }
 
 .app_image_block{
     height: 50% !important;
     align-items: flex-start;
-    border-bottom: 5px dotted #ffd086;
+    border-bottom: 5px dotted yellow;
 }
 .app_image{
     width: 100%;
@@ -54,17 +54,17 @@
     width: 50%;
     height: 40%;
     background-color: #000;
-    border: 3px dashed #af0404;
+    border: 3px dashed chartreuse;
     border-radius: 12px;
-    color: #af0404;
+    color: chartreuse;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 30px;
 }
 
 .app_create-button_block button:active{
-    background-color: #af0404;
-    border: 5px dotted #ffd086;
-    color: #ffd086;
+    background-color: chartreuse;
+    border: 5px dotted black;
+    color: black;
 }
 
 .app_create-button_block button:focus{

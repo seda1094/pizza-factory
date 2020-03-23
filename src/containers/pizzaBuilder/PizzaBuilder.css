@@ -4,7 +4,7 @@
 *{
     box-sizing: border-box;
 }
-
+ 
 .main_block{
     width: 100% !important;
     height: 100% !important;
@@ -14,30 +14,35 @@
     background-attachment: fixed; */
     color: beige;
     font-family: 'Nunito Sans', sans-serif;
-
 }
 
-.section, .row{
+.section_options{
     width: 100% !important;
-    height: 50% !important;
-    border-bottom: 1px solid #ffd086;
+    height: 40% !important;
+}
+
+.section .row_cats{
+    width: 100% !important;
+    height: 55% !important;
+    /* border-bottom: 1px solid #ffd086; */
 }
 
 .section .row .title_block{
     height: 20% !important;
     width: 100% !important;
-    border-bottom: 1px solid #ffd086;
+    border-bottom: 1px dashed yellow;
 }
 
 .section .row .title_block h1{
     font-size: larger;
+    margin: 0 15px;
 
 }
 
 .section .row .option_blocks{
     height: 80% !important;
     width: 100% !important;
-    border-bottom: 1px solid #ffd086;
+    /* border-bottom: 1px solid #ffd086; */
 }
 
 .section .row .option_cat_blocks{
@@ -50,7 +55,7 @@
 .section .row .option_cat_blocks .cat_block{
     width: 90% !important;
     height: 90% !important;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(243,222,165, 0.2);
     border-top-right-radius: 50px;
     border-bottom-left-radius: 20px;
     overflow-x: scroll;
@@ -63,19 +68,20 @@
     width: auto !important;
     height: 100% !important;
     align-items: center;
-
     display: flex;
-
 }
-
 
 .section .row .option_cat_blocks .cat_block .add_div .cat_item_block{
     height: 80% !important;
     width: 90px !important;
     /* width: 30% !important; */
-    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px dashed chartreuse;
     margin-right: 20px;
     border-radius: 10px;
+}
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block_selected{
+    background-color: rgba(155, 249, 171, 0.3);
 }
 
 .section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_image{
@@ -97,4 +103,186 @@
 
 .section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_label p{
     text-align: center;
+}
+
+
+
+
+
+
+
+.section .row_ings{
+    width: 100% !important;
+    height: 45% !important;
+    /* border-bottom: 1px solid #ffd086; */
+}
+
+.section .row .title_ing_block{
+    height: 20% !important;
+    width: 100% !important;
+    /* border-bottom: 1px solid #ffd086; */
+}
+
+.section .row .title_ing_block h1{
+    font-size: medium;
+    margin: 0 15px;
+
+}
+
+.section .row .option_blocks{
+    height: 80% !important;
+    width: 100% !important;
+    /* border-bottom: 1px solid #ffd086; */
+}
+
+.section .row .option_blocks .option_ings_blocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.section .row .option_ings_blocks .ing_block{
+    width: 90% !important;
+    height: 90% !important;
+    /* background-color: rgba(255, 255, 255, .3);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 20px; */
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px 10px;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div{
+    width: auto !important;
+    height: 100% !important;
+    align-items: center;
+    display: flex;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block{
+    height: 98% !important;
+    width: 75px !important;
+    /* width: 30% !important; */
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 3px dashed chartreuse;
+    /* padding: 0px 3px; */
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block_selected{
+    background-color: rgba(155, 249, 171, 0.3);
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_image{
+    height: 60% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_image img{
+    width: 60% !important;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label{
+    height: 40% !important;
+    width: 100% !important; 
+    /* background-color: rgb(184, 98, 98); */
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label .label{
+    text-align: center;
+    font-size: small;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label .price{
+    text-align: center;
+    font-size: xx-small;
+    color: burlywood;
+}
+
+
+
+.section_pizza{
+    width: 100% !important;
+    height: 60% !important;
+}
+
+.section_pizza .total_price_block{
+    width: 100% !important;
+    height: 20% !important;
+    /* background-color: chartreuse; */
+    
+}
+
+.section_pizza .main_pizza_block{
+    width: 100% !important;
+    height: 80% !important;
+    background-color: black;
+    display: flex;
+}
+
+.section_pizza .main_pizza_block .pizza_block{
+    width: 75% !important;
+    height: 100% !important;
+}
+
+.section_pizza .main_pizza_block .pizza_block .pizza{
+    width: 340px !important;
+    height: 340px !important;
+    border-radius: 50%;
+    /* background-color: rgb(238, 198, 20); */
+    position: relative;
+    left: -20%;
+    top: -20%;
+    overflow: hidden;
+}
+
+.ss{
+    width: 340px !important;
+    height: 340px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.section_pizza .main_pizza_block .order_block{
+    width: 25% !important;
+    height: 100% !important;
+    /* background-color: gainsboro; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_item{
+    width: 100% !important;
+    height: 30% !important;
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_item .boldPrice{
+    font-size: large;
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_item .price{
+    font-size: larger;
+    color: chartreuse;
+
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_item button{
+    margin-top: 20px;
+    border: 2px dashed greenyellow;
+    font-size: medium;
+    padding: 5px 10px;
+    color: greenyellow;
+    background-color: rgba(155, 249, 171, 0.3);
+    border-radius: 10px;
+    width: 80px;
 }
