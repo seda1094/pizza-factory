@@ -111,7 +111,7 @@ class App extends Component {
     return ( 
       <div className="main">
         <Switch>
-          <Route path="/" component={HomePage}/>
+          <Route exact path="/" component={HomePage}/>
           <Route path="/pizzaBuilder" component={PizzaBulder}/>
           <Route path="/thankYou" component={ThankYou}/>
         </Switch>

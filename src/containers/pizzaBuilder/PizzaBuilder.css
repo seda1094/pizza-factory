@@ -1,0 +1,100 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Nunito+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.main_block{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #000;
+    /* background-image: url(https://static3.bigstockphoto.com/8/3/2/large2/238178938.jpg);
+    background-size: cover;
+    background-attachment: fixed; */
+    color: beige;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.section, .row{
+    width: 100% !important;
+    height: 50% !important;
+    border-bottom: 1px solid #ffd086;
+}
+
+.section .row .title_block{
+    height: 20% !important;
+    width: 100% !important;
+    border-bottom: 1px solid #ffd086;
+}
+
+.section .row .title_block h1{
+    font-size: larger;
+
+}
+
+.section .row .option_blocks{
+    height: 80% !important;
+    width: 100% !important;
+    border-bottom: 1px solid #ffd086;
+}
+
+.section .row .option_cat_blocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.section .row .option_cat_blocks .cat_block{
+    width: 90% !important;
+    height: 90% !important;
+    background-color: rgba(255, 255, 255, .3);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px 10px;
+
+}
+.section .row .option_cat_blocks .cat_block .add_div{
+    width: auto !important;
+    height: 100% !important;
+    align-items: center;
+
+    display: flex;
+
+}
+
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block{
+    height: 80% !important;
+    width: 90px !important;
+    /* width: 30% !important; */
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_image{
+    height: 75% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_image img{
+    width: 70% !important;
+}
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_label{
+    height: 25% !important;
+    width: 100% !important; 
+}
+
+.section .row .option_cat_blocks .cat_block .add_div .cat_item_block .cat_label p{
+    text-align: center;
+}
