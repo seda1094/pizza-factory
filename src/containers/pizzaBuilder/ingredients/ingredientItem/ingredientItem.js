@@ -1,9 +1,9 @@
 import React from 'react';
 import './ingredientItem.css';
 
-const IngredientItem = ({ings}) => {
+const IngredientItem = ({ings, setStateOfPizza}) => {
     return (
-        <div className="ing_item_block">
+        <div className="ing_item_block" onClick = {()=>setStateOfPizza(ings.imgOnPizza)}>
             <div className="ing_image">
                 <img src={ings.logo} alt="" />
             </div>
