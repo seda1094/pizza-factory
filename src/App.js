@@ -20,13 +20,13 @@ class App extends Component {
         {
           id: '1',
           label: 'chesse',
-          imgSrc: 'chesse.png',
+          imgSrc: 'https://pngimage.net/wp-content/uploads/2018/05/cheese-clipart-png.png',
           ingredients: [
             {
               id: '1',
               ingName: 'Mozzarella',
               price: 3,
-              logo: 'mozz.jpg',
+              logo: 'https://salvo1968.co.uk/media/catalog/product/cache/2c83c4d31fd0090674a9637ee17e02e6/c/a/castelli_mozzarellacherryballs125g_main_image_1.jpg',
               imgOnPizza: 'mozz.png'
             },
             {
@@ -48,8 +48,8 @@ class App extends Component {
 
         {
           id: '2',
-          label: 'veg',
-          imgSrc: 'veg.png',
+          label: 'vegetagle',
+          imgSrc: 'https://c7.hotpng.com/preview/108/382/328/junk-food-vegetable-tooth-pathology-clip-art-vector-vegetables.jpg',
           ingredients: [
             {
               id: '1',
@@ -77,7 +77,64 @@ class App extends Component {
         {
           id: '3',
           label: 'meat',
-          imgSrc: 'meat.png',
+          imgSrc: 'https://aealbert.com/images/meat-clipart-2.png',
+          ingredients: [
+            {
+              id: '1',
+              ingName: 'bacon',
+              price: 3,
+              logo: 'bacon.jpg',
+              imgOnPizza: 'bacon.png'
+            },
+            {
+              id: '2',
+              ingName: 'pepperoni',
+              price: 4,
+              logo: 'pepperoni.jpg',
+              imgOnPizza: 'pepperoni.png'
+            },
+            {
+              id: '3',
+              ingName: 'chicken',
+              price: 5,
+              logo: 'chicken.jpg',
+              imgOnPizza: 'chicken.png'
+            }
+          ]
+        },
+        {
+          id: '4',
+          label: 'meat',
+          imgSrc: 'https://www.pngkey.com/png/full/864-8640714_indian-cuisine-spice-herb-clip-art-star-spices.png',
+          ingredients: [
+            {
+              id: '1',
+              ingName: 'bacon',
+              price: 3,
+              logo: 'bacon.jpg',
+              imgOnPizza: 'bacon.png'
+            },
+            {
+              id: '2',
+              ingName: 'pepperoni',
+              price: 4,
+              logo: 'pepperoni.jpg',
+              imgOnPizza: 'pepperoni.png'
+            },
+            {
+              id: '3',
+              ingName: 'chicken',
+              price: 5,
+              logo: 'chicken.jpg',
+              imgOnPizza: 'chicken.png'
+            }
+          ]
+        }
+        ,
+        {
+          id: '4',
+          label: 'herbs',
+          imgSrc: 'https://webstockreview.net/images/crops-clipart-herb-garden-2.png',
           ingredients: [
             {
               id: '1',
@@ -112,7 +169,7 @@ class App extends Component {
       <div className="main">
         <Switch>
           <Route exact path="/" component={HomePage}/>
-          <Route path="/pizzaBuilder" component={PizzaBulder}/>
+          <Route path="/pizzaBuilder" products={this.state.categories} component={PizzaBulder}/>
           <Route path="/thankYou" component={ThankYou}/>
         </Switch>
       </div>

@@ -1,0 +1,44 @@
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block{
+    height: 98% !important;
+    width: 75px !important;
+    /* width: 30% !important; */
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 3px dashed chartreuse;
+    /* padding: 0px 3px; */
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block_selected{
+    background-color: rgba(155, 249, 171, 0.3);
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_image{
+    height: 60% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_image img{
+    width: 60% !important;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label{
+    height: 40% !important;
+    width: 100% !important; 
+    /* background-color: rgb(184, 98, 98); */
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label .label{
+    text-align: center;
+    font-size: small;
+}
+
+.section .row .option_ings_blocks .ing_block .add_div .ing_item_block .ing_label .price{
+    text-align: center;
+    font-size: xx-small;
+    color: burlywood;
+}
