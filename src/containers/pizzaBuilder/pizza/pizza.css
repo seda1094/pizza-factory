@@ -1,0 +1,25 @@
+
+.section_pizza .main_pizza_block .pizza_block{
+    width: 75% !important;
+    height: 100% !important;
+}
+
+.section_pizza .main_pizza_block .pizza_block .pizza{
+    width: 340px !important;
+    height: 340px !important;
+    border-radius: 50%;
+    background-color: rgb(238, 198, 20) !important;
+    position: relative;
+    left: -20%;
+    top: 5%;
+    overflow: hidden;
+}
+
+.ss{
+    width: 340px !important;
+    height: 340px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}

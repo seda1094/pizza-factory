@@ -9,14 +9,14 @@ const IngredientItem = ({ings, setStateOfPizza}) => {
     return (
         <div className="ing_item_block">
             <div className="ing_image">
-                <img src={ings.logo} alt="" onClick = {()=>setStateOfPizza(ings.imgOnPizza)}/>
+                <img src={ings.logo} alt="" onClick = {()=>setStateOfPizza(ings)}/>
                 <div className="close" onClick = {blbl}>
                     {/* TODO connect from assets */}
                     <img src="https://image.flaticon.com/icons/svg/1828/1828665.svg" alt=""/>
                 </div>
             </div>
 
-            <div className="ing_label" onClick = {()=>setStateOfPizza(ings.imgOnPizza)}>
+            <div className="ing_label" onClick = {()=>setStateOfPizza(ings)}>
                 <p className="label">{ings.ingName}</p>
                 <p className="price">{ings.price}</p>
             </div>

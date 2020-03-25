@@ -39,71 +39,87 @@
     height: 60% !important;
 }
 
-.section_pizza .total_price_block{
-    width: 100% !important;
-    height: 20% !important;
-    /* background-color: chartreuse; */
-    
-}
+
 
 .section_pizza .main_pizza_block{
     width: 100% !important;
-    height: 80% !important;
+    height: 100% !important;
     background-color: black;
     display: flex;
-}
-
-.section_pizza .main_pizza_block .pizza_block{
-    width: 75% !important;
-    height: 100% !important;
-}
-
-.section_pizza .main_pizza_block .pizza_block .pizza{
-    width: 340px !important;
-    height: 340px !important;
-    border-radius: 50%;
-    /* background-color: rgb(238, 198, 20); */
-    position: relative;
-    left: -20%;
-    top: -20%;
-    overflow: hidden;
-}
-
-.ss{
-    width: 340px !important;
-    height: 340px !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-
 }
 
 .section_pizza .main_pizza_block .order_block{
     width: 25% !important;
     height: 100% !important;
     /* background-color: gainsboro; */
-    display: flex;
+    /* display: flex;
     align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 20px;
+    justify-content: center; */
+    /* padding-bottom: 20px; */
 }
 
-.section_pizza .main_pizza_block .order_block .order_block_item{
+.section_pizza .main_pizza_block .order_block .addBlock{
+    width: 100% !important;
+    height: 17% !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section_pizza .main_pizza_block .order_block .addBlock h3{
+    /* text-align: right; */
+    width: 80%;
+    height: 100%;
+    font-size: larger;
+    color: springgreen;
+
+}
+.section_pizza .main_pizza_block .order_block .order_block_list{
+    width: 100% !important;
+    height: 53% !important;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+
+
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_list ul{
+    height: auto !important;
+    width: 80% !important;
+}
+.section_pizza .main_pizza_block .order_block .order_block_list ul li{
+    height: auto !important;
+    overflow: auto;
+    font-size: smaller;
+    text-align: center;
+    color: rgba(219, 244, 223, 0.6);
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_price{
     width: 100% !important;
     height: 30% !important;
+    display: flex;
+    align-items: center;
+
 }
 
-.section_pizza .main_pizza_block .order_block .order_block_item .boldPrice{
+.section_pizza .main_pizza_block .order_block .order_block_price div{
+    width: 100% !important;
+    height: 60% !important; 
+}
+
+.section_pizza .main_pizza_block .order_block .order_block_price .boldPrice{
     font-size: large;
 }
 
-.section_pizza .main_pizza_block .order_block .order_block_item .price{
+.section_pizza .main_pizza_block .order_block .order_block_price .price{
     font-size: larger;
     color: chartreuse;
 
 }
 
-.section_pizza .main_pizza_block .order_block .order_block_item button{
+.section_pizza .main_pizza_block .order_block .order_block_price button{
     margin-top: 20px;
     border: 2px dashed greenyellow;
     font-size: medium;

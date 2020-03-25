@@ -3,7 +3,7 @@ import './ingredients.css'
 import IngredientItem from '../ingredientItem/ingredientItem';
 
 const Ingredients = (props) => {
-    console.log(props.selectedCatIngs);
+    // console.log(props.selectedCatIngs);
     // let y = selectedCatIngs[0].ingredients
     // console.log(y);
     
