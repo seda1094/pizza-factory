@@ -1,7 +1,11 @@
 import React from 'react'
 import './HomePage.css';
 
-const HomePage = () => {
+
+const HomePage = (props) => {
+    function goToPizzaBuilder(){
+        props.history.push("/pizzaBuilder");
+    }
     return (
         <div fluid className="main_block">
             <div className="app_title_block">
@@ -11,7 +15,7 @@ const HomePage = () => {
                 <img className="app_image" src="https://i.ya-webdesign.com/images/pizza-clipart-pizaa-9.png"/>
             </div>
             <div className="app_create-button_block">
-                <button>make</button>
+                <button onClick={goToPizzaBuilder}>make</button>
             </div>
         </div>
     );
