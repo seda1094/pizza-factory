@@ -3,6 +3,10 @@ import './PizzaBuilder.css';
 import Categories from './categories/categories/categories';
 import Ingredients from './ingredients/ingredients/ingredients';
 import Pizza from './pizza/pizza';
+import PizzaIngsList from './pizza/pizzaIngsList/pizzaIngsList';
+import Order from './order/order';
+
+
 
 class PizzaBulder extends Component {
   constructor(props) {
@@ -34,7 +38,6 @@ class PizzaBulder extends Component {
               logo: 'https://menstrual-cycle-calculator.com/wp-content/uploads/2018/05/swiss-cheese-min.png',
               imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png',
               count: 1
-
             },
             {
               id: '3',
@@ -43,7 +46,6 @@ class PizzaBulder extends Component {
               logo: 'https://clipartart.com/images/blue-cheese-clipart-1.png',
               imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png',
               count: 1
-
             }
           ]
         },
@@ -239,44 +241,68 @@ class PizzaBulder extends Component {
             ingName: 'Mozzarella',
             price: 3,
             logo: 'https://sc01.alicdn.com/kf/UT8t9sSXwdXXXcUQpbXM.png',
-            imgOnPizza: 'https://i.ibb.co/BL6zXZh/Drawing-5.png'
+            imgOnPizza: 'https://i.ibb.co/BL6zXZh/Drawing-5.png',
+            count: 1
           },
           {
             id: '2',
             ingName: 'Ricotta',
             price: 4,
             logo: 'https://menstrual-cycle-calculator.com/wp-content/uploads/2018/05/swiss-cheese-min.png',
-            imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png'
+            imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png',
+            count: 1
           },
           {
             id: '3',
             ingName: 'Rokfor',
             price: 5,
             logo: 'https://clipartart.com/images/blue-cheese-clipart-1.png',
-            imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png'
+            imgOnPizza: 'https://i.ibb.co/Q694kgb/Drawing-1.png',
+            count: 1
           }
         ]
       },
-      ingsOfPizza: []
+      ingsOfPizza: [],
+      totalPrice: 0
     }
   }
-
+//TODO: selectedCat[0] problem
   selectCat = (id) => {
     const selectedCat = this.state.categories.filter(cat => cat.id === id)
     this.setState((prev) => ({ ...prev, selectedCatIngs: selectedCat[0] }))
   }
 
   setIngsOfPizza = (ingredient) => {
-    this.setState((prev) => ({ ...prev, ingsOfPizza: [...prev.ingsOfPizza, ingredient] }))
-    //stugel ete arden ka county avelacnel
+    
+    const newingsOfPizza = this.state.ingsOfPizza.concat()
+    const indexIng = this.state.ingsOfPizza.findIndex((ing) => ing === ingredient)
+
+    if(indexIng < 0){
+      this.setState((prev) => ({ ...prev, ingsOfPizza: [...prev.ingsOfPizza, ingredient] }))
+    }
+    else{
+      newingsOfPizza[indexIng].count += 1
+      this.setState((prev) => ({ ...prev, ingsOfPizza: newingsOfPizza }))
+    }
+    console.log(this.state.ingsOfPizza);
+    
   }
+
+  setPrice = (ingPrice) => {
+    const total = ingPrice + this.state.totalPrice
+    this.setState((prev) => 
+    ({ ...prev, totalPrice: total}))
+  } 
 
   render() {
     return (
       <div className="main_block">
         <div className="section section_options">
           <Categories categories={this.state.categories} selectCat={this.selectCat} />
-          <Ingredients selectedCatIngs={this.state.selectedCatIngs} setStateOfPizza={this.setIngsOfPizza} />
+          <Ingredients 
+          selectedCatIngs={this.state.selectedCatIngs} 
+          setStateOfPizza={this.setIngsOfPizza} 
+          setPrice={this.setPrice}/>
         </div>
         <div className="section section_pizza">
           <div className="main_pizza_block">
@@ -285,32 +311,8 @@ class PizzaBulder extends Component {
               <div className="addBlock">
                 {/* <h3>Your<br/>orders!</h3> */}
               </div>
-              <div className="order_block_list">
-                <ul>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                  <li><span>x2</span>sdfafasf</li>
-                </ul>
-              </div>
-              <div className="order_block_price">
-               <div>
-                  <p><span className="boldPrice">Price:</span><span className="price">13$</span></p>
-                  <button>order</button>
-               </div>
-              </div>
+              <PizzaIngsList ingsOfPizza={this.state.ingsOfPizza}/>
+              <Order totalPrice={this.state.totalPrice}/>
             </div>
           </div>
         </div>

@@ -74,27 +74,6 @@
     color: springgreen;
 
 }
-.section_pizza .main_pizza_block .order_block .order_block_list{
-    width: 100% !important;
-    height: 53% !important;
-    display: flex;
-    justify-content: center;
-    overflow-y: auto;
-
-
-}
-
-.section_pizza .main_pizza_block .order_block .order_block_list ul{
-    height: auto !important;
-    width: 80% !important;
-}
-.section_pizza .main_pizza_block .order_block .order_block_list ul li{
-    height: auto !important;
-    overflow: auto;
-    font-size: smaller;
-    text-align: center;
-    color: rgba(219, 244, 223, 0.6);
-}
 
 .section_pizza .main_pizza_block .order_block .order_block_price{
     width: 100% !important;
