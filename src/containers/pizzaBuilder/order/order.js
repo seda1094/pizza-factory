@@ -3,7 +3,7 @@ const Order = ({totalPrice}) => {
     return (
         <div className="order_block_price">
             <div>
-                <p><span className="boldPrice">Price:</span><span className="price">{totalPrice}</span></p>
+                <p><span className="boldPrice">Price:</span><span className="price">{totalPrice}$</span></p>
                 <button>order</button>
             </div>
         </div>

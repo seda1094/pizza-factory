@@ -5,7 +5,7 @@ import IngredientItem from '../ingredientItem/ingredientItem';
 const Ingredients = (props) => {
     // console.log(props.selectedCatIngs);
     // let y = selectedCatIngs[0].ingredients
-    console.log(props);
+    // console.log(props);
 
     return (
         <div className="row row_ings">
@@ -21,10 +21,11 @@ const Ingredients = (props) => {
                                     props.selectedCatIngs.length !== 0 ? 
                                     props.selectedCatIngs.ingredients.map(ings => 
                                     <IngredientItem
-                                    setPrice={props.setPrice} 
                                     key={ings.id} 
                                     ings={ings} 
                                     setStateOfPizza={props.setStateOfPizza} 
+                                    deleteIng={props.deleteIng}
+                                    ingsOfPizza = {props.ingsOfPizza}
                                     />) 
                                     : <h1>nooo</h1>
                                 }

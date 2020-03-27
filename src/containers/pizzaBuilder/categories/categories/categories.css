@@ -30,6 +30,10 @@
     overflow: scroll;
 }
 
+.section .row .option_cat_blocks::-webkit-scrollbar {
+    display: none;
+  }
+
 .section .row .option_cat_blocks .cat_block{
     width: 90% !important;
     height: 90% !important;
@@ -40,8 +44,12 @@
     display: flex;
     flex-wrap: nowrap;
     padding: 0px 10px;
-
 }
+
+.section .row .option_cat_blocks .cat_block::-webkit-scrollbar {
+    display: none;
+  }
+
 .section .row .option_cat_blocks .cat_block .add_div{
     width: auto !important;
     height: 100% !important;

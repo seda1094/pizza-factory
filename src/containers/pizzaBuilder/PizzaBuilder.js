@@ -130,7 +130,7 @@ class PizzaBulder extends Component {
               id: '2',
               ingName: 'pepperoni',
               price: 4,
-              logo: 'https://lh3.googleusercontent.com/proxy/bnM9CXZQ4cdRU_aYcJ3Yt2o8V4enjqK8jzZElCcHstJI4-XBN3mnuKbe-F0lfbQyPEt0zdbNW1wX5KoSLhTnAbmKDMfgsE4',
+              logo: 'https://clipartstation.com/wp-content/uploads/2018/10/peperoni-clipart-1.png',
               imgOnPizza: 'https://i.ibb.co/zVkL69R/Drawing-3.png',
               count: 1
             },
@@ -266,43 +266,69 @@ class PizzaBulder extends Component {
       totalPrice: 0
     }
   }
-//TODO: selectedCat[0] problem
+  //TODO: selectedCat[0] problem
   selectCat = (id) => {
     const selectedCat = this.state.categories.filter(cat => cat.id === id)
     this.setState((prev) => ({ ...prev, selectedCatIngs: selectedCat[0] }))
   }
 
   setIngsOfPizza = (ingredient) => {
-    
     const newingsOfPizza = this.state.ingsOfPizza.concat()
     const indexIng = this.state.ingsOfPizza.findIndex((ing) => ing === ingredient)
 
-    if(indexIng < 0){
+    if (indexIng < 0) {
       this.setState((prev) => ({ ...prev, ingsOfPizza: [...prev.ingsOfPizza, ingredient] }))
     }
-    else{
+    else {
       newingsOfPizza[indexIng].count += 1
       this.setState((prev) => ({ ...prev, ingsOfPizza: newingsOfPizza }))
     }
-    console.log(this.state.ingsOfPizza);
-    
+    this.setPrice()
   }
 
-  setPrice = (ingPrice) => {
-    const total = ingPrice + this.state.totalPrice
-    this.setState((prev) => 
-    ({ ...prev, totalPrice: total}))
-  } 
+  // setPrice = (ingPrice) => {
+  //   const total = ingPrice + this.state.totalPrice
+  //   this.setState((prev) => 
+  //   ({ ...prev, totalPrice: total}))
+  // } 
+
+//TODO: borotsya s event loop
+//potomuchto verkhnyaya functia rabotaet poeszechem setPrice,,i nechego pribavlyat'
+  setPrice = () => {
+    setTimeout(() => {
+      let totPrice = 0
+      this.state.ingsOfPizza.map(ing => {
+        totPrice = totPrice + (ing.price * ing.count)
+      })
+      this.setState(prev => ({ ...prev, totalPrice: totPrice }))
+    }, 0);
+  }
+
+
+  deleteIng = (ingredient) => {
+
+    let newSelectedCatIngs = [...this.state.ingsOfPizza]
+    const index = newSelectedCatIngs.findIndex(ing => ing === ingredient)
+    if (newSelectedCatIngs[index].count === 1) {
+      newSelectedCatIngs = newSelectedCatIngs.filter(ing => ing !== ingredient)
+    }
+    else{
+      newSelectedCatIngs[index].count--
+    }
+    this.setState(prev => ({...prev, ingsOfPizza: newSelectedCatIngs}))
+  }
 
   render() {
     return (
       <div className="main_block">
         <div className="section section_options">
           <Categories categories={this.state.categories} selectCat={this.selectCat} />
-          <Ingredients 
-          selectedCatIngs={this.state.selectedCatIngs} 
-          setStateOfPizza={this.setIngsOfPizza} 
-          setPrice={this.setPrice}/>
+          <Ingredients
+            selectedCatIngs={this.state.selectedCatIngs}
+            setStateOfPizza={this.setIngsOfPizza}
+            deleteIng={this.deleteIng}
+            ingsOfPizza={this.state.ingsOfPizza}
+          />
         </div>
         <div className="section section_pizza">
           <div className="main_pizza_block">
@@ -311,8 +337,8 @@ class PizzaBulder extends Component {
               <div className="addBlock">
                 {/* <h3>Your<br/>orders!</h3> */}
               </div>
-              <PizzaIngsList ingsOfPizza={this.state.ingsOfPizza}/>
-              <Order totalPrice={this.state.totalPrice}/>
+              <PizzaIngsList ingsOfPizza={this.state.ingsOfPizza} />
+              <Order totalPrice={this.state.totalPrice} />
             </div>
           </div>
         </div>

@@ -29,6 +29,10 @@
     overflow: scroll;
 }
 
+.section .row .option_blocks .option_ings_blocks::-webkit-scrollbar {
+    display: none;
+  }
+
 .section .row .option_ings_blocks .ing_block{
     width: 90% !important;
     height: 90% !important;
@@ -40,6 +44,10 @@
     flex-wrap: nowrap;
     padding: 0px 10px;
 }
+
+.section .row .option_ings_blocks .ing_block::-webkit-scrollbar {
+    display: none;
+  }
 
 .section .row .option_ings_blocks .ing_block .add_div{
     width: auto !important;
